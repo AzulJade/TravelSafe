@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Customer Registration
+{%endblock%}
+
+{%block content%}
+<section>
+<form method = "POST" style="color:white;">
+    {{form.hidden_tag()}}
+
+    <h1>Please create your account</h1>
+    {{form.username.label()}}
+    {{form.username(placeholder= "User Name")}}
+
+    {{form.email.label()}}
+    {{form.email(placeholder="Email Address")}}
+
+    {{form.date_of_birth.label()}}
+    {{form.date_of_birth()}}
+
+    {{form.password1.label()}}
+    {{form.password1(placeholder = "Password")}}
+
+    {{form.password2.label()}}
+    {{form.password2(placeholder = "Confirm Password")}}
+
+
+    <br>
+    {{form.submit()}}
+</form>
+</section>
+{%endblock%}

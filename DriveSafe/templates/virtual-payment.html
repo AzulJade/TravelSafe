@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Virtual payment setup and management - TravelSafe
+{%endblock%}
+
+{%block content%}
+<section>
+    <ul>
+        <li><a href="{{url_for('virtual_payment_page')}}">Virtual payment setup and management</a></li>
+        <li><a href="{{url_for('journey_history_page')}}">Journey history and fare receipts</a></li>
+        <li><a href="{{url_for('payment_security_info_page')}}">Payment security information</a></li>
+    </ul>
+</section>
+
+<section>
+    <h1>Virtual Payment Setup and Management</h1>
+    <p>Set up your secure virtual payment method to make cashless payments for taxi rides. Manage your payment preferences, link your account, and ensure everything is safely encrypted.</p>
+    <button type="button">Set Up Payment</button>
+    <p>Already have an account? <a href="#">Log in</a> to manage your payment details.</p>
+</section>
+{%endblock%}

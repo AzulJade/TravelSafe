@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Guidelines for Identifying Legitimate Taxis - TravelSafe
+{%endblock%}
+
+{%block content%}
+<section>
+    <h1>Guidelines for Identifying Legitimate Taxis</h1>
+    <p>Make sure the taxi you’re entering is safe and legitimate by following these guidelines:</p>
+    <div class="guidelines-container">
+        <div class="guideline-box">
+            <h2>Check for Official Identification</h2>
+            <p>Look for an official taxi license or badge displayed clearly inside the vehicle.</p>
+        </div>
+        <div class="guideline-box">
+            <h2>Ensure a Working Meter</h2>
+            <p>Ensure the taxi has a working meter to track your fare.</p>
+        </div>
+        <div class="guideline-box">
+            <h2>Verify Driver's Identification</h2>
+            <p>Check if the driver's identification matches the details in the taxi.</p>
+        </div>
+        <div class="guideline-box">
+            <h2>Use Registered Services</h2>
+            <p>Prefer calling a registered taxi service or using a verified app.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Related Links</h2>
+    <ul>
+        <li><a href="{{url_for('safety_tips_page')}}">Safety Tips</a></li>
+        <li><a href="{{url_for('avoid_travel_scams_page')}}">Avoiding Common Travel Scams</a></li>
+        <li><a href="{{url_for('regional_safety_page')}}">Regional Safety Recommendations</a></li>
+    </ul>
+</section>
+
+{%endblock%}

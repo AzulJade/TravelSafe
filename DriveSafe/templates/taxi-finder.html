@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Taxi Finder - TravelSafe</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        #map {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
+    </style>
+</head>
+   
+<body>
+    <div id = "map"></div>
+    <script src="{{ url_for('static', filename='javascript/map.js') }}"></script>
+    <nav> 
+        <ul> 
+            <li><a href="home.html">Home</a></li>
+            <li><a href="realtime-alerts.html">Real-Time Alerts</a></li>
+            <li><a href="taxi-finder.html">Taxi Finder</a></li>
+            <li><a href="secure-payments.html">Secure Payments</a></li>
+            <li><a href="safety-tips.html">Safety Tips</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact-support.html">Contact & Support</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>Taxi Finder</h1>
+        <p>Find nearby taxi stands quickly using our interactive map and search tool.</p>
+    	<ul>
+      		<li><a href="interactive-map.html">Interactive map of nearby taxi stands</a></li>
+        	<li><a href="search-bar.html">Search bar for specific locations</a></li>
+       		<li><a href="est-travel-time.html">Estimated travel time to taxi stands</a></li>
+    	</ul>
+    </section>
+
+       <!-- Website Footer -->
+       <footer>
+        <p>&copy; 2024 TravelSafe. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

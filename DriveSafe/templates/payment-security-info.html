@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Payment security information - TravelSafe
+{%endblock%}
+
+{%block content%}
+<section>
+    <ul>
+        <li><a href="{{url_for('virtual_payment_page')}}">Virtual payment setup and management</a></li>
+        <li><a href="{{url_for('journey_history_page')}}">Journey history and fare receipts</a></li>
+        <li><a href="{{url_for('payment_security_info_page')}}">Payment security information</a></li>
+    </ul>
+</section>
+
+<section>
+<h1>Payment Security Information</h1>
+<p>Learn about how we protect your financial data. We use industry-standard encryption and secure servers to safeguard your payment information.</p>
+<ul>
+    <li>SSL encryption ensures your data is safe during transactions.</li>
+    <li>Your payment details are stored securely and never shared with third parties.</li>
+    <li>We continuously monitor for any suspicious activity to keep your account secure.</li>
+</ul>
+</section>
+
+
+
+{%endblock%}

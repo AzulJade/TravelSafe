@@ -1,0 +1,431 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f7fa; /* Light blue background */
+    color: #003c30; /* Darker teal text */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #00796b; /* Darker teal for headings */
+    text-align: center; /* Centered headings */
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #004d40; /* Darker teal for nav */
+    padding: 10px;
+    text-align: center; /* Centered nav items */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #b2ebf2; /* Light blue on hover */
+}
+
+/* Section Styles */
+section {
+    margin: 20px auto; /* Centered sections */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for sections */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation for scaling and shadow */
+    max-width: 800px; /* Max width for better layout */
+}
+
+section:hover {
+    transform: scale(1.03); /* Scale up on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Tips Container */
+.tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between boxes */
+}
+
+/* Tip Box Styles */
+.tip-box {
+    background-color: #b2dfdb; /* Light teal background for boxes */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(30% - 20px); /* Responsive width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s; /* Animation for scaling */
+}
+
+.tip-box:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Button Styles */
+button {
+    background-color: #00796b; /* Button color */
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Increased padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #004d40; /* Darker on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #005f6b; /* Blue-themed footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Additional styles for feedback form */
+#feedback-form {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#feedback-form h2 {
+    margin-bottom: 15px;
+}
+
+#feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#feedback-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+}
+
+#feedback-form button:hover {
+    background-color: #45a049;
+}
+
+/* Additional styles for safety-tips.html */
+
+/* General Styles for Safety Tips Page */
+body.safety-tips-page {
+    background-color: #f0f4f8; /* Light gray background for safety tips page */
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #00796b; /* Dark teal background */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #b2dfdb; /* Light teal background for carousel items */
+    border-radius: 10px;
+    display: none; /* Hide all items by default */
+    text-align: center; /* Center text */
+}
+
+.carousel-item.active {
+    display: block; /* Show the active item */
+}
+
+/* Carousel Button Styles */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    background-color: #00796b;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    z-index: 10; /* Ensure buttons are above carousel items */
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+
+
+/* Tips Section Styles */
+.tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between boxes */
+}
+
+/* Tip Box Styles */
+.tip-box {
+    background-color: #ffffff; /* White background for tip boxes */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(30% - 20px); /* Responsive width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s; /* Animation for scaling */
+    text-align: center; /* Center text */
+}
+
+.tip-box i {
+    font-size: 40px; /* Icon size */
+    color: #00796b; /* Icon color */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+.tip-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Related Links Styles */
+section ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Centered related links */
+}
+
+section ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+section ul li a {
+    color: #00796b; /* Dark teal for links */
+    text-decoration: none;
+}
+
+section ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #005f6b; /* Blue-themed footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+/* Adjusting the hero section heading color */
+.hero h1 {
+    color: #ffffff; /* Ensure the text is white for visibility */
+}
+
+/* Adjusting the safety-tips-container for regional-safety.html */
+.safety-tips-container {
+    display: flex;
+    flex-direction: column; /* Stack safety tips vertically */
+    align-items: center; /* Center align items */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.safety-tip-box {
+    background-color: #b2dfdb; /* Light teal background for safety tips */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 90%; /* Responsive width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s; /* Animation for scaling */
+}
+
+.safety-tip-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Related Links Styles for regional-safety.html */
+section ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Centered related links */
+}
+
+section ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+section ul li a {
+    color: #00796b; /* Dark teal for links */
+    text-decoration: none;
+}
+
+section ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Additional styles for avoid-travel-scams.html and legitimate-taxis.html */
+
+/* General Styles for Scam and Taxi Pages */
+body {
+    background-color: #f0f4f8; /* Light gray background for scam and taxi pages */
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+/* Section Styles */
+section {
+    margin: 20px auto; /* Centered sections */
+    padding: 20px;
+    max-width: 800px; /* Max width for better layout */
+    background-color: #ffffff; /* White background for sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Heading Styles */
+h1, h2 {
+    color: #004d40; /* Darker teal for headings */
+    text-align: center; /* Centered headings */
+}
+
+/* Scam and Guideline Box Styles */
+.scams-container, .guidelines-container {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center align items */
+}
+
+.scam-box, .guideline-box {
+    background-color: #b2dfdb; /* Light teal background for scam and guideline boxes */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 90%; /* Responsive width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s; /* Animation for scaling */
+}
+
+.scam-box:hover, .guideline-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Tips Container Styles */
+.tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between boxes */
+}
+
+/* Tip Box Styles */
+.tip-box {
+    background-color: #ffffff; /* White background for tip boxes */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(30% - 20px); /* Responsive width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s; /* Animation for scaling */
+    text-align: center; /* Center text */
+}
+
+.tip-box i {
+    font-size: 40px; /* Icon size */
+    color: #00796b; /* Icon color */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+.tip-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Related Links Styles */
+section ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Centered related links */
+}
+
+section ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+section ul li a {
+    color: #00796b; /* Dark teal for links */
+    text-decoration: none;
+}
+
+section ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #005f6b; /* Blue-themed footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto; /* Push footer to the bottom */
+}

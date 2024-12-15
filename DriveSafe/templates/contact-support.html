@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Contact & Support - Your Website Name
+{%endblock%}
+
+{%block content%}
+<section>
+<h1>Contact & Support</h1>
+<p>If you have any questions or need assistance, please visit our customer support portal. You can also submit feedback to help us improve TravelSafe.</p>
+<ul>
+    <li><a href="#">Customer support portal</a></li>
+    <li><a href="#">FAQs and troubleshooting</a></li>
+    <li><a href="#">Feedback submission</a></li>
+</ul>
+
+<!-- Feedback Form -->
+<form id="feedback-form">
+    <h2>Feedback Form</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Feedback:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="submit">Submit Feedback</button>
+</form>
+</section>
+{%endblock%}
+

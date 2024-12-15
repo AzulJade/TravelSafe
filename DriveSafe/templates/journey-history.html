@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Journey history and fare receipts - TravelSafe
+{%endblock%}
+
+{%block content%}
+<section>
+    <ul>
+        <li><a href="{{url_for('virtual_payment_page')}}">Virtual payment setup and management</a></li>
+        <li><a href="{{url_for('journey_history_page')}}">Journey history and fare receipts</a></li>
+        <li><a href="{{url_for('payment_security_info_page')}}">Payment security information</a></li>
+    </ul>
+</section>
+
+<section>
+    <h1>Journey History and Fare Receipts</h1>
+    <p>View your past journeys and access fare receipts. Track your trips and monitor your spending easily.</p>
+    <ul>
+        <li>Trip #1: $12 - Date: Dec 1, 2024</li>
+        <li>Trip #2: $8 - Date: Dec 3, 2024</li>
+        <li>Trip #3: $15 - Date: Dec 5, 2024</li>
+    </ul>
+    <button type="button">Download Receipts</button>
+</section>
+
+{%endblock%}

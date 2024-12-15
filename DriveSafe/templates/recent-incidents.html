@@ -1,0 +1,62 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Recent incident updates - TravelSafe
+{%endblock%}
+
+{%block content%}
+<section>
+    <li><a href="{{url_for('crime_hotspots_page')}}">Crime hotspot maps</a></li>
+    <li><a href="{{url_for('recent_incidents_page')}}">Recent incident updates</a></li>
+</ul>
+</section>
+
+<section>
+<h1>Recent Incident Updates</h1>
+<p>Stay informed of the latest safety incidents happening around you. Below are the most recent reported events:</p>
+
+<div class="incident">
+    <h2>Robbery</h2>
+    <p><strong>Location:</strong> Queen Street, Port of Spain <span class="date">- Dec 1, 2024</span></p>
+    <p><a href="https://www.newsday.co.tt">Read more on Newsday</a></p>
+</div>
+
+<div class="incident">
+    <h2>Assault</h2>
+    <p><strong>Location:</strong> Independence Square, San Fernando <span class="date">- Nov 28, 2024</span></p>
+    <p><a href="https://www.newsday.co.tt">Read more on Newsday</a></p>
+</div>
+
+<div class="incident">
+    <h2>Car Theft</h2>
+    <p><strong>Location:</strong> Trincity Mall Parking Lot <span class="date">- Nov 27, 2024</span></p>
+    <p><a href="https://www.newsday.co.tt">Read more on Newsday</a></p>
+</div>
+
+<div class="incident">
+    <h2>Mugging</h2>
+    <p><strong>Location:</strong> Ariapita Avenue, Woodbrook <span class="date">- Nov 25, 2024</span></p>
+    <p><a href="https://www.newsday.co.tt">Read more on Newsday</a></p>
+</div>
+
+<div class="incident">
+    <h2>Burglary</h2>
+    <p><strong>Location:</strong> King Street, Port of Spain <span class="date">- Nov 23, 2024</span></p>
+    <p><a href="https://www.newsday.co.tt">Read more on Newsday</a></p>
+</div>
+
+<div class="incident">
+    <h2>Shoplifting</h2>
+    <p><strong>Location:</strong> North Mall, Port of Spain <span class="date">- Nov 20, 2024</span></p>
+    <p><a href="https://www.newsday.co.tt">Read more on Newsday</a></p>
+</div>
+
+<div class="incident">
+    <h2>Vandalism</h2>
+    <p><strong>Location:</strong> West Mall, Diego Martin <span class="date">- Nov 18, 2024</span></p>
+    <p><a href="https://www.newsday.co.tt">Read more on Newsday</a></p>
+</div>
+
+<p>Stay tuned for more real-time updates as we continue to monitor the safety of your area.</p>
+</section>
+{%endblock%}

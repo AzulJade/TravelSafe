@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Search bar for specific locations - TravelSafe
+{%endblock%}
+
+{%block content%}
+<section>
+    <ul>
+          <li><a href="{{url_for('interactive_map_page')}}">Interactive map of nearby taxi stands</a></li>
+        <li><a href="{{url_for('search_bar_page')}}">Search bar for specific locations</a></li>
+           <li><a href="{{url_for('est_travel_time_page')}}">Estimated travel time to taxi stands</a></li>
+    </ul>
+</section>
+
+<section>
+    <h1>Search Bar for Specific Locations</h1>
+    <p>Find taxi stands in specific areas by using the search bar below. Enter your location or destination for the most accurate results.</p>
+<!-- Search Bar -->
+    <input type="text" placeholder="Enter location">
+    <button type="submit">Search</button>
+</section>
+{%endblock%}

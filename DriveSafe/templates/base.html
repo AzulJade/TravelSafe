@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="en">  
+<head> 
+    <meta charset="UTF-8">	<!--States that the document is in English -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- character encoding -->
+    <meta name="description" content="TravelSafe is a digital platform aimed at enhancing traveler safety and convenience. It provides real-time updates on nearby taxi stands, crime hotspots, and safety tips for citizens of Trinidad"> <!--Description of web page--> 
+    <meta name="keywords" content="TravelSafe, Travel, Safe, Taxi, Trinidad"> <!--Keywords for browser-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Page dimensions-->
+    
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    {%block extrastyle%}
+
+    {%endblock%}
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> <!--Put the real name of the file here-->
+</head>
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>TravelSafe</h1>
+        <p>Your guide to safer travels</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav> 
+        <ul> 
+            <li><a href="{{url_for('home_page')}}">Home</a></li>
+   	        <li><a href="{{url_for('realtime_alerts_page')}}">Real-Time Alerts</a></li>
+            <li><a href="{{url_for('taxi_finder_page')}}">Taxi Finder</a></li>
+            <li><a href="{{url_for('secure_payments_page')}}">Secure Payments</a></li>
+            <li><a href="{{url_for('safety_tips_page')}}">Safety Tips</a></li>
+            <li><a href="{{url_for('about_page')}}">About</a></li>
+            <li><a href="{{url_for('contact_support_page')}}">Contact & Support</a></li>
+        </ul>
+    </nav>
+
+    {%block content%}
+
+    {% endblock %}
+    
+    <!-- Website Footer -->
+    <footer>
+        <p>&copy; 2024 TravelSafe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

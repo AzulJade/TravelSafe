@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Regional Safety Recommendations - TravelSafe
+{%endblock%}
+
+{%block content%}
+<section>
+    <h1>Regional Safety Recommendations</h1>
+    <p>Stay informed about safety in the region you're traveling to. Here are some tips specific to certain areas:</p>
+    <div class="safety-tips-container">
+        <div class="safety-tip-box">
+            <h2>Urban Areas</h2>
+            <p>Stick to well-lit and populated streets, and avoid isolated areas at night.</p>
+        </div>
+        <div class="safety-tip-box">
+            <h2>Rural Areas</h2>
+            <p>Know the nearest safe points or police stations. Roads may be less populated, so ensure your phone is charged.</p>
+        </div>
+        <div class="safety-tip-box">
+            <h2>Tourist Attractions</h2>
+            <p>Beware of pickpockets in crowded areas. Keep your valuables secure and be mindful of your surroundings.</p>
+        </div>
+    </div>
+    <p>Always keep local emergency numbers saved on your phone in case of an emergency.</p>
+</section>
+
+<section>
+    <h2>Related Links</h2>
+    <ul>
+        <li><a href="{{url_for('legitimate_taxis_page')}}">Guidelines for Identifying Legitimate Taxis</a></li>
+        <li><a href="{{url_for('avoid_travel_scams_page')}}">Avoiding Common Travel Scams</a></li>
+        <li><a href="{{url_for('safety_tips_page')}}">Safety Tips</a></li>
+    </ul>
+</section>
+
+{%endblock%}

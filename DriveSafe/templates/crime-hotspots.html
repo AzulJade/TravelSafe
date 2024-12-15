@@ -1,0 +1,73 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Crime hotspot maps - TravelSafe
+{%endblock%}
+
+{%block extrastyle%}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<style>
+    /* Height for the map */
+    #map {
+        height: 500px; /* You can adjust the height as needed */
+        width: 100%;
+    }
+</style>
+{%endblock%}
+
+{%block content%}
+<section>
+    <li><a href="{{url_for('crime_hotspots_page')}}">Crime hotspot maps</a></li>
+    <li><a href="{{url_for('recent_incidents_page')}}">Recent incident updates</a></li>
+</ul>
+</section>
+
+<!-- Crime hotspot maps section -->
+<section> 
+<h1>Crime hotspot maps</h1>
+<p>Stay safe by being aware of high-crime areas in your vicinity. Check out the map below to see crime hotspots in your region.</p>
+<div id="map"></div> <!--Map displayed here-->
+</section>
+
+<!-- Leaflet JavaScript (the functionality needed to create, manipulate and display maps on your webpage using JavaScript)-->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
+
+<script> 
+var map = L.map('map').setView([10.691, -61.222], 10); // Latitude, longitude, and zoom level (set for Trinidad)
+
+//OpenStreetMap tiles 
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+var hotspots = [
+{ lat: 10.6544, lng: -61.5334, description: "Robbery at Queen's Park" },
+    { lat: 10.6553, lng: -61.5100, description: "Assault on Main St." },
+    { lat: 10.6613, lng: -61.5122, description: "Theft at Eastern Market" },
+    { lat: 10.6333, lng: -61.5222, description: "Vandalism near West Mall" },
+    { lat: 10.7651, lng: -61.4493, description: "Burglary on King St." },
+    { lat: 10.7651, lng: -61.4493, description: "Burglary on King St." },
+    { lat: 10.7651, lng: -61.4493, description: "Burglary on King St." },
+{ lat: 10.6682, lng: -61.5120, description: "Carjacking near Port of Spain" },
+{ lat: 10.6500, lng: -61.2500, description: "Pickpocketing at South Square" },
+{ lat: 10.6980, lng: -61.2050, description: "Shoplifting at North Mall" },
+{ lat: 10.6610, lng: -61.2510, description: "Robbery at Maracas Beach" },
+{ lat: 10.6700, lng: -61.2300, description: "Assault on Broadway" },
+{ lat: 10.6750, lng: -61.2100, description: "Mugging near City Center" },
+{ lat: 10.6900, lng: -61.2250, description: "Theft at Green Market" },
+{ lat: 10.7000, lng: -61.2200, description: "Burglary on Elm St." },
+{ lat: 10.6800, lng: -61.2450, description: "Car theft near Park Ave" },
+{ lat: 10.6720, lng: -61.2230, description: "Pickpocketing at Queen's Mall" },
+{ lat: 10.6780, lng: -61.2400, description: "Shoplifting at City Supermarket" }
+];
+
+// Loops through each hotspot and adds it to the map
+hotspots.forEach(function(hotspot) {
+    L.marker([hotspot.lat, hotspot.lng])
+        .addTo(map)
+        .bindPopup(hotspot.description);
+});
+</script>
+<p>View the latest crime rate data: <a href="https://www.ttps.gov.tt/Stats/Crime-Division-Totals" target="_blank">Crime Rate Dataset</a></p>
+
+{%endblock%}

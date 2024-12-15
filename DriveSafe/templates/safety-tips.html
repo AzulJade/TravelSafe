@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Tips - TravelSafe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="safety-tips.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="safety-tips-page">
+    <nav> 
+        <ul> 
+            <li><a href="{{url_for('home_page')}}">Home</a></li>
+   	        <li><a href="{{url_for('realtime_alerts_page')}}">Real-Time Alerts</a></li>
+            <li><a href="{{url_for('taxi_finder_page')}}">Taxi Finder</a></li>
+            <li><a href="{{url_for('secure_payments_page')}}">Secure Payments</a></li>
+            <li><a href="{{url_for('safety_tips_page')}}">Safety Tips</a></li>
+            <li><a href="{{url_for('about_page')}}">About</a></li>
+            <li><a href="{{url_for('contact_support_page')}}">Contact & Support</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Safety Tips</h1>
+        <p>Your guide to staying safe while traveling.</p>
+    </section>
+
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-item active">
+                <i class="fas fa-lock"></i>
+                <h3>Always Keep Your Belongings Secure</h3>
+                <p>Always keep your belongings secure and within sight.</p>
+            </div>
+            <div class="carousel-item">
+                <i class="fas fa-taxi"></i>
+                <h3>Use Reputable Taxi Services</h3>
+                <p>Use reputable taxi services and verify the driver's identity.</p>
+            </div>
+            <div class="carousel-item">
+                <i class="fas fa-eye"></i>
+                <h3>Stay Aware of Your Surroundings</h3>
+                <p>Stay aware of your surroundings, especially in crowded areas.</p>
+            </div>
+            <div class="carousel-item">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Trust Your Instincts</h3>
+                <p>If something feels off, remove yourself from the situation.</p>
+            </div>
+            <div class="carousel-item">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Keep Emergency Contacts Handy</h3>
+                <p>Keep emergency contacts saved on your phone for quick access.</p>
+            </div>
+        </div>
+        <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <section>
+        <h2>Cash and Payments</h2>
+        <div class="tips-container">
+            <div class="tip-box">
+                <i class="fas fa-wallet"></i>
+                <h3>Limit Cash Carrying</h3>
+                <p>Limit the amount of cash you carry and use digital payment methods when possible.</p>
+            </div>
+            <div class="tip-box">
+                <i class="fas fa-user-check"></i>
+                <h3>Inform Someone About Your Plans</h3>
+                <p>Inform someone about your travel plans and check in regularly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Be Cautious</h2>
+        <div class="tips-container">
+            <div class="tip-box">
+                <i class="fas fa-user-secret"></i>
+                <h3>Be Cautious with Strangers</h3>
+                <p>Be cautious when accepting help from strangers, especially in unfamiliar places.</p>
+            </div>
+            <div class="tip-box">
+                <i class="fas fa-phone"></i>
+                <h3>Know Local Emergency Numbers</h3>
+                <p>Familiarize yourself with local emergency numbers and procedures.</p>
+            </div>
+            <div class="tip-box">
+                <i class="fas fa-map-signs"></i>
+                <h3>Have a Backup Plan</h3>
+                <p>Always have a backup plan for transportation, especially at night.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Related Links</h2>
+        <ul>
+            <li><a href="{{url_for('legitimate_taxis_page')}}">Guidelines for Identifying Legitimate Taxis</a></li>
+            <li><a href="{{url_for('avoid_travel_scams_page')}}">Avoiding Common Travel Scams</a></li>
+            <li><a href="{{url_for('regional_safety_page')}}">Regional Safety Recommendations</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TravelSafe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlide(direction) {
+            const items = document.querySelectorAll('.carousel-item');
+            items[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + items.length) % items.length;
+            items[currentSlide].classList.add('active');
+        }
+    </script>
+</body>
+</html>

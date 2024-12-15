@@ -1,0 +1,54 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Avoiding Common Travel Scams - TravelSafe
+{%endblock%}
+
+{%block content%}
+<section>
+    <h1>Avoiding Common Travel Scams</h1>
+    <p>Stay alert to common travel scams that target tourists and travelers. Here’s how to avoid being tricked:</p>
+    <div class="scams-container">
+        <div class="scam-box">
+            <h2>Agree on the Fare</h2>
+            <p>Always agree on the fare before starting your journey if the taxi does not use a meter.</p>
+        </div>
+        <div class="scam-box">
+            <h2>Be Wary of Destination Changes</h2>
+            <p>Be wary of taxi drivers who suggest changing your destination to a “better” or “safer” place.</p>
+        </div>
+        <div class="scam-box">
+            <h2>Avoid Too-Good-To-Be-True Prices</h2>
+            <p>Avoid drivers who offer too-good-to-be-true prices or ask for upfront payments.</p>
+        </div>
+        <div class="scam-box">
+            <h2>Use Official Taxi Stands</h2>
+            <p>Use official taxi stands or apps, and avoid accepting rides from random drivers at airports or stations.</p>
+        </div>
+    </div>
+    <h2>Additional Tips</h2>
+    <p>Here are some additional tips to keep in mind:</p>
+    <div class="tips-container">
+        <div class="tip-box">
+            <p>Research common scams in the area you are visiting.</p>
+        </div>
+        <div class="tip-box">
+            <p>Trust your instincts; if something feels off, seek help or leave the situation.</p>
+        </div>
+        <div class="tip-box">
+            <p>Keep your belongings secure and be cautious of distractions.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Related Links</h2>
+    <ul>
+        <li><a href="{{url_for('legitimate_taxis_page')}}">Guidelines for Identifying Legitimate Taxis</a></li>
+        <li><a href="{{url_for('regional_safety_page')}}">Regional Safety Recommendations</a></li>
+        <li><a href="{{url_for('safety_tips_page')}}">Safety Tips</a></li>
+    </ul>
+</section>
+
+
+{%endblock%}

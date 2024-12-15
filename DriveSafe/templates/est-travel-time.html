@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Estimated travel time to taxi stands - TravelSafe
+{%endblock%}
+
+{%block content%}
+<section>
+    <ul>
+          <li><a href="{{url_for('interactive_map_page')}}">Interactive map of nearby taxi stands</a></li>
+        <li><a href="{{url_for('search_bar_page')}}">Search bar for specific locations</a></li>
+           <li><a href="{{url_for('est_travel_time_page')}}">Estimated travel time to taxi stands</a></li>
+    </ul>
+</section>
+
+<section>
+    <h1>Estimated Travel Time to Taxi Stands</h1>
+    <p>View the estimated travel time to nearby taxi stands based on your current location or entered destination.</p>
+       <ul>
+        <li>Taxi Stand 1 - 5 minutes away</li>
+        <li>Taxi Stand 2 - 10 minutes away</li>
+        <li>Taxi Stand 3 - 15 minutes away</li>
+       </ul>
+</section>
+
+{%endblock%}
+
+

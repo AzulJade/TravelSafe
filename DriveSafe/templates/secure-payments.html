@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Secure Payments - TravelSafe
+{%endblock%}
+
+{%block content%}
+<section>
+    <h1>Secure Payments</h1>
+    <p>Manage your virtual payment setup and view journey history and fare receipts securely.</p>
+    <ul>
+        <li><a href="{{url_for('virtual_payment_page')}}">Virtual payment setup and management</a></li>
+        <li><a href="{{url_for('journey_history_page')}}">Journey history and fare receipts</a></li>
+        <li><a href="{{url_for('payment_security_info_page')}}">Payment security information</a></li>
+    </ul>
+
+    <button>
+        <a href = "{{url_for('customer_registration')}}">Register</a>
+    </button>
+</section>
+{%endblock%}

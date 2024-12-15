@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+{%block title%}
+Real-Time Alerts - TravelSafe
+{%endblock%}
+
+{%block content%}
+<section>
+    <h1>Real-Time Alerts</h1>
+    <p>Stay informed with the latest updates on nearby crime hotspots and receive safety notifications to guide your journey.</p>
+    <ul>
+        <li><a href="{{url_for('crime_hotspots_page')}}">Crime hotspot maps</a></li>
+        <li><a href="{{url_for('recent_incidents_page')}}">Recent incident updates</a></li>
+    </ul>
+    <!-- Add more content specific to real-time alerts here -->
+</section>
+
+{%endblock%}
